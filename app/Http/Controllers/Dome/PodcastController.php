@@ -21,7 +21,7 @@ class PodcastController extends Controller
 
 
     /**
-     *
+     *  队列 dome
      */
     public function store(Request $request) {
 
