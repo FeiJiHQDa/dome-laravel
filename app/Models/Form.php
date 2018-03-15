@@ -28,4 +28,13 @@ class Form extends Model {
         return $arr;
     }
 
+
+    /**
+     * select * from `phone` where `phone`.`form_id` = 1 and `phone`.`form_id` is not null limit 1
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function phone() {
+        return $this->hasOne('App\Models\Phone', 'user_id');
+    }
+
 }
