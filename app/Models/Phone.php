@@ -24,4 +24,21 @@ class Phone extends Model {
     }
 
 
+    public function form1() {
+        return $this->belongsTo('App\Models\Form', 'user_id')->withDefault(function ($user) {
+//            'name1' => '游客',
+            $user->user = '游客';
+        });
+    }
+
+
+    /*
+     *   不行的
+     * select * from `form` where `form`.`user_id` = 1 and `form`.`user_id` is not null limit 1
+     */
+    public function user1() {
+        return $this->hasOne('App\Models\Form', 'user_id');
+    }
+
+
 }

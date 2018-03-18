@@ -37,4 +37,11 @@ class Form extends Model {
         return $this->hasOne('App\Models\Phone', 'user_id');
     }
 
+
+    public function manyPhone() {
+        return $this->hasMany('App\Models\Phone', 'user_id')
+            ->where('id', 2);
+
+    }
+
 }

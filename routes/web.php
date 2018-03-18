@@ -28,5 +28,5 @@ Route::post('dome/pod/store', 'Dome\PodcastController@store');
 
 Route::get('dome/elo/getup', 'Dome\EloquentController@getUserPhone');
 Route::get('dome/elo/up', 'Dome\EloquentController@phoneToUser');
-
+Route::get('dome/elo/many', 'Dome\EloquentController@hasMany');
 
